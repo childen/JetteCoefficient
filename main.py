@@ -5,10 +5,13 @@ name2 = sys.argv[2]
 
 def countLetters(str):
     counts = list()
+    str = str.lower()
+    str = str.replace(" " , "")
     seen = list()
     for letter in list(str):
         if letter not in seen:
             seen.append(letter)
+            print(seen)
             counts.append(str.count(letter))
     return counts
 
@@ -24,7 +27,7 @@ def calcJetteCoefficient(counts, subcounts):
     elif len(counts) == 1:
         subcounts.append(counts[0])
     if len(subcounts) == 2:
-        return subcounts
+        return subcountsa
     return calcJetteCoefficient(subcounts, list())
 
 
