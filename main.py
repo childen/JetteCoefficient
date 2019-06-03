@@ -27,7 +27,7 @@ def calcJetteCoefficient(counts, subcounts):
     elif len(counts) == 1:
         subcounts.append(counts[0])
     if len(subcounts) == 2:
-        return subcountsa
+        return subcounts
     return calcJetteCoefficient(subcounts, list())
 
 
